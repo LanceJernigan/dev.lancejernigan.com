@@ -1,0 +1,103 @@
+.menuIcon {
+    width: 20px;
+    padding: 25px;
+    cursor: pointer;
+    position: relative;
+    opacity: .8;
+    transition: all .3s ease-in-out;
+    user-select: none;
+}
+
+.menuIcon::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, .2);
+    top: 50%;
+    left: 50%;
+    transition: all .05s ease-in-out;
+    transform: translateY(-48%) translateX(-45%) scale(0);
+    z-index: -1;
+}
+
+.menuIcon::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, .15);
+    top: 50%;
+    left: 50%;
+    transition: all .1s ease-in-out;
+    transform: translateY(-48%) translateX(-45%) scale(0);
+    z-index: -1;
+}
+
+.menuIcon:active::after {
+    transform: translateY(-48%) translateX(-45%) scale(1);
+}
+
+.menuIcon div {
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: #000;
+    margin: 3px;
+}
+
+.active {
+    width: 20px;
+    padding: 25px;
+    cursor: pointer;
+    position: relative;
+    opacity: .5;
+    transition: all .3s ease-in-out;
+    user-select: none;
+}
+
+.active::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, .15);
+    top: 50%;
+    left: 50%;
+    transition: all .5s ease-in-out;
+    transform: translateY(-48%) translateX(-45%) scale(1);
+    z-index: -1;
+}
+
+.active::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, .2);
+    top: 50%;
+    left: 50%;
+    transition: all .1s ease-in-out;
+    transform: translateY(-48%) translateX(-45%) scale(0);
+    z-index: -1;
+}
+
+.active:active::after {
+    transform: translateY(-48%) translateX(-45%) scale(1);
+}
+
+.active div {
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: #000;
+    margin: 3px;
+}

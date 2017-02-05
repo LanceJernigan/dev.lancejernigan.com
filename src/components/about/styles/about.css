@@ -1,0 +1,24 @@
+.about {
+    padding-top: 20vh;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: #f4f5f7;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, .4);
+}
+
+    .about h1 {
+    }
+
+    .about p {
+        margin-top: 25px !important;
+    }
+
+    .about a {
+        text-decoration: none;
+    }
+
+.wrapper {
+    max-width: 700px;
+    margin: auto;
+    padding: 0 15px;
+}

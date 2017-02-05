@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
+
+.App {
+  font-family: 'roboto', sans-serif;
+  font-size: 13px;
+  color: #000;
+  height: 100vh;
+  overflow: hidden;
+}
+
+  .App * {
+    font-size: 15px;
+  }
+
+@media (min-width: 600px) {
+  .App * {
+    font-size: 19px;
+  }
+}
+
+  .App h1 {
+    font-size: 2.1em;
+    font-weight: 300;
+    margin: 0;
+    color: inherit;
+    opacity: .75;
+  }
+  
+  .App h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0;
+    color: inherit;
+    opacity: .9;
+  }
+  
+  .App h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+    color: inherit;
+    opacity: .8;
+  }
+  
+  .App h4 {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin: 0;
+    color: inherit;
+    opacity: .7;
+  }
+  
+  .App h5, .App a {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0;
+    color: inherit;
+    opacity: .85;
+  }
+  
+  .App h6 {
+    font-size: .9em;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0;
+    color: inherit;
+    opacity: .85;
+  }
+  
+  .App p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 300;
+    color: inherit;
+    opacity: .7;
+  }
+  
+  .Page {
+    height: 100%;
+    overflow: scroll;
+  }
+
+.content {
+  padding-top: 58px;
+  min-height: 120vh;
+  margin: 0 10%;
+}

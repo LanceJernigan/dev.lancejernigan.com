@@ -1,0 +1,58 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+}
+
+  .background {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 0;
+  }
+  
+    .background img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-height: 100vh;
+      min-width: 100%;
+      margin: auto;
+      z-index: -1;
+    }
+    
+  .content {
+    max-width: 600px;
+    font-size: 25px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: -1;
+  }
+  
+    .content h1 {
+      font-weight: 500 !important;
+      padding: 5px;
+      line-height: .8em;
+      font-size: 2.4em !important;
+      text-transform: uppercase;
+      opacity: .85 !important;
+    }
+    
+    .content h5 {
+      font-weight: 400 !important;
+      padding: 5px;
+      text-transform: uppercase;
+      opacity: .75 !important;
+    }
+  
+  .divider {
+    height: 2px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    background: rgba(0, 0, 0, .75);
+  }
