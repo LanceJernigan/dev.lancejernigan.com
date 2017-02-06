@@ -5,7 +5,7 @@
     position: relative;
     opacity: .8;
     transition: all .3s ease-in-out;
-    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .menuIcon::before {
@@ -57,7 +57,7 @@
     position: relative;
     opacity: .5;
     transition: all .3s ease-in-out;
-    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .active::before {
@@ -70,8 +70,8 @@
     background: rgba(0, 0, 0, .15);
     top: 50%;
     left: 50%;
-    transition: all .5s ease-in-out;
-    transform: translateY(-48%) translateX(-45%) scale(1);
+    animation: bounceIn .6s forwards;
+    animation-timing-function: ease-in-out;
     z-index: -1;
 }
 
@@ -100,4 +100,22 @@
     border-radius: 2px;
     background: #000;
     margin: 3px;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-48%) translateX(-45%) scale(1);
+    }
+    14% {
+        transform: translateY(-48%) translateX(-45%) scale(1);
+    }
+    15% {
+        transform: translateY(-48%) translateX(-45%) scale(0);
+    }
+    70% {
+        transform: translateY(-48%) translateX(-45%) scale(0);
+    }
+    100% {
+        transform: translateY(-48%) translateX(-45%) scale(1);
+    }
 }

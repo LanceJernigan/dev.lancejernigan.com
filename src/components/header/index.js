@@ -1,19 +1,20 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-import MenuIcon from '../menu/menuIcon'
+import MenuIcon from '../menu/icon'
 import Sidebar from '../sidebar/'
 
-import styles from './styles/header.css'
+import styles from './styles.css'
 
-const Header = ({page = {scrolled: 0}, menu = {}}) => {
+const Header = ({page}) => {
   
   return (
     
-    <div className={page.scrolled >= window.innerHeight ? styles.scrolled : styles.header}>
+    <div className={page.scroll.top >= window.innerHeight ? styles.scrolled : styles.header}>
 
-        <MenuIcon menu={menu} />
+        <MenuIcon />
     
-        <Sidebar menu={menu} />
+        <Sidebar />
     
     </div>
     
@@ -21,4 +22,15 @@ const Header = ({page = {scrolled: 0}, menu = {}}) => {
   
 }
 
-export default Header
+const mapStateToProps = state => ({
+    page: state.page
+})
+
+const mapDispatchToProps = dispatch => ({})
+
+const HeaderConnect = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Header)
+
+export default HeaderConnect

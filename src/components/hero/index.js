@@ -1,13 +1,14 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-import styles from './styles/hero.css'
+import styles from './styles.css'
 
-const Hero = ({page = {scrolled: 0}, menu}) => {
+const Hero = ({page, menu, props}) => {
   
   const style = {
     content: {
-      top: (((window.innerHeight / 100) * 20) + Math.floor(page.scrolled / 8)) + 'px',
-      opacity: ((100 - (page.scrolled / 7)) / 100)
+      top: (((window.innerHeight / 100) * 20) + Math.floor(page.scroll.top / 8)) + 'px',
+      opacity: ((100 - (page.scroll.top / 7)) / 100)
     }
   }
   
@@ -37,4 +38,16 @@ const Hero = ({page = {scrolled: 0}, menu}) => {
   
 }
 
-export default Hero
+const mapStateToProps = state => ({
+    page: state.page,
+    menu: state.menu
+})
+
+const mapDispatchToProps = dispatch => ({})
+
+const HeroConnect = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Hero)
+
+export default HeroConnect

@@ -1,76 +1,30 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
 
-import styles from './styles/index.css'
+import styles from './styles.css'
 
 import Header from '../header/'
+import Page from '../page/'
 import Hero from '../hero/'
-import About from '../about/'
 
-class App extends React.Component {
+const App = ({children}) => {
 
-    constructor(props) {
+    return (
 
-        super(props)
+        <div className={styles.App}>
 
-        this.state = {
-            menu: {
-                active: false,
-                toggle: () => {
-                    this.setState({
-                        ...this.state,
-                        menu: {
-                            ...this.state.menu,
-                            active: ! this.state.menu.active
-                        }
-                    })
-                }
-            },
-            page: {
-                scrolled: 0
-            }
-        }
+            <Header />
 
-    }
+            <Page>
 
-    componentDidMount() {
+                <Hero />
 
-        ReactDOM.findDOMNode(this.refs.page).addEventListener('scroll', this.pageScroll)
+                {children}
 
-    }
+            </Page>
 
-    pageScroll = e => {
+        </div>
 
-        this.setState({
-            ...this.state,
-            page: {
-                scrolled: e.currentTarget.scrollTop,
-            }
-        })
-
-    }
-
-    render() {
-
-        return (
-
-            <div className={styles.App}>
-
-                <Header page={this.state.page} menu={this.state.menu} />
-
-                <div className={styles.Page} ref='page' onClick={this.state.menu.active ? this.state.menu.toggle : null}>
-
-                    <Hero page={this.state.page} menu={this.state.menu} />
-
-                    <About />
-
-                </div>
-
-            </div>
-
-        )
-
-    }
+    )
 
 }
 

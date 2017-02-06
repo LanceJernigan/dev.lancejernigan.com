@@ -1,5 +1,5 @@
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -37,7 +37,7 @@
       font-weight: 500 !important;
       padding: 5px;
       line-height: .8em;
-      font-size: 2.4em !important;
+      font-size: 1.8em !important;
       text-transform: uppercase;
       opacity: .85 !important;
     }

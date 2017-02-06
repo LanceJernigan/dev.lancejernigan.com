@@ -16,9 +16,3 @@
     .about a {
         text-decoration: none;
     }
-
-.wrapper {
-    max-width: 700px;
-    margin: auto;
-    padding: 0 15px;
-}

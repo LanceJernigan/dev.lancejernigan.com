@@ -1,0 +1,13 @@
+.menuItem {
+    display: block;
+    padding: 13px 30px;
+    font-size: .8em !important;
+    font-weight: 500 !important;
+    text-decoration: none;
+    color: #000;
+    opacity: .85 !important;
+}
+
+.menuItem:hover {
+    background: rgba(0, 0, 0, .05);
+}

@@ -1,0 +1,17 @@
+.wrapper {
+    max-width: 900px;
+    margin: auto;
+    padding: 5px;
+    animation: fadeIn;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
