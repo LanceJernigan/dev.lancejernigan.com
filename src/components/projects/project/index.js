@@ -2,12 +2,9 @@ import React from 'react'
 
 import {Link} from 'react-router'
 
-import Page from '../../page/'
-import Hero from '../../hero/'
-
 import styles from './styles.css'
 
-const Project = ({id, title, description, active = false}) => {
+const Project = ({params, id, title, description, active = false}) => {
 
     return (
 

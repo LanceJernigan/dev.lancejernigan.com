@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
+import {setHeader} from '../header/actions'
 import {updatePage} from './actions'
 import {toggleSidebar} from '../sidebar/actions'
 
@@ -21,13 +22,21 @@ const Page = ({sidebar, children, actions}) => {
 }
 
 const mapStateToProps = state => ({
-    sidebar: state.sidebar
+    sidebar: state.sidebar,
 })
 
 const mapDispatchToProps = dispatch => ({
     actions: {
-        update: e => dispatch(updatePage(e)),
-        toggleSidebar: e => dispatch(toggleSidebar())
+        update: e => {
+            if (e.currentTarget.scrollTop >= window.innerHeight)
+                dispatch(setHeader({active: true}))
+            else
+                dispatch(setHeader({active: false}))
+
+            dispatch(updatePage(e))
+
+        },
+        toggleSidebar: e => dispatch(toggleSidebar()),
     }
 })
 

@@ -4,28 +4,33 @@ import {connect} from 'react-redux'
 import List from '../list/'
 import Project from './project/'
 import Wrapper from '../wrapper/'
+import Hero from '../hero/'
 
 import styles from './styles.css'
 
-const Projects = ({projects, params}) => {
-
-    projects = params.hasOwnProperty('id') ? projects.map( project => params.id == project.id ? Object.assign(project, {active: true}) : Object.assign(project, {active: false})) : projects
+const Projects = ({projects}) => {
 
     return (
 
-        <div className={styles.projects}>
+        <div>
 
-            <Wrapper>
+            <Hero background />
 
-                <h1>Projects</h1>
+            <div className={styles.projects}>
 
-            </Wrapper>
+                <Wrapper>
 
-            <Wrapper className={styles.wrapper}>
+                    <h1>Projects</h1>
 
-                <List className={styles.projectsList} callback={Project} items={projects}  />
+                </Wrapper>
 
-            </Wrapper>
+                <Wrapper className={styles.wrapper}>
+
+                    <List className={styles.projectsList} callback={Project} items={projects}  />
+
+                </Wrapper>
+
+            </div>
 
         </div>
 

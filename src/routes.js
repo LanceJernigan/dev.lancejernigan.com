@@ -8,6 +8,8 @@ import App from './components/app/'
 
 import About from './components/about/'
 import Projects from './components/projects/'
+import Focus from './components/focus/'
+import Project from './components/projects/project/'
 
 const history = syncHistoryWithStore(browserHistory, store)
 
@@ -19,8 +21,7 @@ const routes = (
 			<Route path="/" component={App}>
 				<IndexRoute component={About} />
 				<Route exact={true} path="/about" component={About} />
-				<Route path="/projects/" component={Projects} />
-				<Route path="/projects/:id" component={Projects} />
+				<Route path="/projects" component={Projects} />
 			</Route>
 		</Router>
 	</Provider>

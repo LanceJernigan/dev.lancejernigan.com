@@ -3,8 +3,8 @@ import React from 'react'
 import styles from './styles.css'
 
 import Header from '../header/'
+import Sidebar from '../sidebar/'
 import Page from '../page/'
-import Hero from '../hero/'
 
 const App = ({children}) => {
 
@@ -14,9 +14,9 @@ const App = ({children}) => {
 
             <Header />
 
-            <Page>
+            <Sidebar />
 
-                <Hero />
+            <Page>
 
                 {children}
 

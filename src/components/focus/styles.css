@@ -1,0 +1,18 @@
+.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    animation: fadeIn .3s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 100
+    }
+}

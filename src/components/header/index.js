@@ -2,20 +2,17 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import MenuIcon from '../menu/icon'
-import Sidebar from '../sidebar/'
 
 import styles from './styles.css'
 
-const Header = ({page}) => {
-  
+const Header = ({header}) => {
+
   return (
     
-    <div className={page.scroll.top >= window.innerHeight ? styles.scrolled : styles.header}>
+    <div className={(header.active ? styles.active : styles.inactive) + ' ' + (header.hidden ? styles.hidden : '')} style={{background: header.color}}>
 
         <MenuIcon />
-    
-        <Sidebar />
-    
+
     </div>
     
   )
@@ -23,14 +20,11 @@ const Header = ({page}) => {
 }
 
 const mapStateToProps = state => ({
-    page: state.page
+    header: state.header
 })
-
-const mapDispatchToProps = dispatch => ({})
 
 const HeaderConnect = connect(
     mapStateToProps,
-    mapDispatchToProps
 )(Header)
 
 export default HeaderConnect

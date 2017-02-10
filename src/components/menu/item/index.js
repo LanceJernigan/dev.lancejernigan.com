@@ -7,7 +7,7 @@ const MenuItem = ({id, route = '/', label = ''}) => {
 
     return (
 
-        <Link to={route} key={id} className={styles.menuItem}>{label}</Link>
+        <Link to={route} key={id} className={styles.menuItem} activeClassName={styles.active}>{label}</Link>
 
     )
 
