@@ -1,0 +1,8 @@
+.base {
+    height: 100%;
+}
+
+    .base img {
+        max-height: 25px;
+        margin: 20px;
+    }
